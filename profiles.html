@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#08080d">
+
+    <meta name="description"
+        content="Explore creators, personalities and social profiles on X2 SOCIAL HUB. Discover and connect with amazing people.">
+
+    <meta property="og:title"
+        content="Explore Profiles | X2 SOCIAL HUB">
+
+    <meta property="og:description"
+        content="Discover creators and connect with amazing people on X2 SOCIAL HUB.">
+
+    <meta property="og:type" content="website">
+
+    <title>Explore Profiles | X2 SOCIAL HUB</title>
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!-- Main Stylesheets -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/themes.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body data-theme="liquid">
+
+
+<!-- =====================================================
+     AMBIENT BACKGROUND
+===================================================== -->
+
+<div class="ambient-background">
+
+    <div class="ambient-orb orb-one"></div>
+
+    <div class="ambient-orb orb-two"></div>
+
+    <div class="ambient-orb orb-three"></div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header glass-panel">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-symbol">X2</span>
+
+        <span class="brand-name">SOCIAL HUB</span>
+
+    </a>
+
+
+    <nav class="desktop-navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="profiles.html" class="active">Explore</a>
+
+        <a href="add-profile.html">Join Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="icon-button"
+            id="theme-toggle"
+            aria-label="Change appearance"
+            title="Change Theme">
+
+            ◐
+
+        </button>
+
+
+        <a href="add-profile.html" class="header-cta primary-button">
+
+            Join Hub
+
+            <span>↗</span>
+
+        </a>
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false">
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-navigation" id="mobile-navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="profiles.html" class="active">Explore Profiles</a>
+
+        <a href="add-profile.html">Join Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     DIRECTORY HERO
+===================================================== -->
+
+<main>
+
+<section class="directory-hero">
+
+    <div class="directory-hero-content">
+
+        <div class="hero-badge">
+
+            <span class="status-dot"></span>
+
+            THE CREATOR DIRECTORY
+
+        </div>
+
+
+        <h1 class="directory-title">
+
+            Discover
+
+            <span class="gradient-text">Your People.</span>
+
+        </h1>
+
+
+        <p class="directory-description">
+
+            Explore unique personalities, discover creators
+            and connect with people who inspire you.
+
+        </p>
+
+
+        <div class="directory-statistics">
+
+            <div class="directory-stat">
+
+                <strong id="total-profiles">01</strong>
+
+                <span>Profiles</span>
+
+            </div>
+
+
+            <div class="stat-divider"></div>
+
+
+            <div class="directory-stat">
+
+                <strong>08</strong>
+
+                <span>Categories</span>
+
+            </div>
+
+
+            <div class="stat-divider"></div>
+
+
+            <div class="directory-stat">
+
+                <strong>∞</strong>
+
+                <span>Connections</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SEARCH SECTION
+===================================================== -->
+
+<section class="directory-section">
+
+
+    <div class="directory-search-container glass-panel">
+
+        <span class="search-icon" aria-hidden="true">⌕</span>
+
+
+        <input
+            type="search"
+            id="profile-search"
+            placeholder="Search by name, username or interest..."
+            aria-label="Search profiles"
+            autocomplete="off">
+
+
+        <button
+            id="clear-search"
+            class="clear-search-button"
+            aria-label="Clear search"
+            type="button">
+
+            ✕
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         CATEGORY FILTERS
+    ================================================== -->
+
+    <div class="category-filter-wrapper">
+
+        <div class="category-filter-heading">
+
+            <span>EXPLORE BY CATEGORY</span>
+
+        </div>
+
+
+        <div class="category-filters" id="category-filters">
+
+            <button
+                class="category-button active"
+                data-category="all">
+
+                ✦ All Profiles
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="creator">
+
+                ◈ Creators
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="influencer">
+
+                ◎ Influencers
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="artist">
+
+                ♫ Artists
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="photographer">
+
+                ◉ Photography
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="business">
+
+                ◇ Business
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="developer">
+
+                ⌘ Developers
+
+            </button>
+
+
+            <button
+                class="category-button"
+                data-category="other">
+
+                ✧ Others
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         FEATURED PROFILES
+    ================================================== -->
+
+    <section class="directory-featured-section">
+
+        <div class="directory-section-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+
+                    HANDPICKED FOR YOU
+
+                </span>
+
+                <h2>
+
+                    Featured <span class="gradient-text">Profiles.</span>
+
+                </h2>
+
+            </div>
+
+
+            <span class="featured-label">
+
+                ✦ FEATURED
+
+            </span>
+
+        </div>
+
+
+        <div
+            class="featured-profile-grid"
+            id="featured-profiles">
+
+            <!-- Featured profiles generated by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ALL PROFILES
+    ================================================== -->
+
+    <section class="all-profiles-section">
+
+        <div class="directory-section-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+
+                    THE COMMUNITY
+
+                </span>
+
+                <h2>
+
+                    All <span class="gradient-text">Profiles.</span>
+
+                </h2>
+
+                <p id="results-count">
+
+                    Discover people worth following.
+
+                </p>
+
+            </div>
+
+
+            <div class="directory-sort">
+
+                <label for="profile-sort">
+
+                    Sort:
+
+                </label>
+
+
+                <select id="profile-sort">
+
+                    <option value="featured">Featured first</option>
+
+                    <option value="name">Name A–Z</option>
+
+                    <option value="newest">Newest first</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="profile-grid"
+            id="profile-directory">
+
+            <!-- Profile cards generated by JavaScript -->
+
+        </div>
+
+
+        <!-- EMPTY SEARCH RESULT -->
+
+        <div
+            class="empty-search-state"
+            id="empty-search-state"
+            hidden>
+
+            <div class="empty-search-icon">
+
+                ⌕ 
+
+            </div>
+
+
+            <h3>No profiles found</h3>
+
+
+            <p>
+
+                Try another name, username or category.
+
+            </p>
+
+
+            <button
+                class="primary-button"
+                id="reset-filters">
+
+                Reset Filters
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         JOIN COMMUNITY CTA
+    ================================================== -->
+
+    <section class="directory-join-section">
+
+        <div class="directory-join-card glass-panel">
+
+            <div class="directory-join-content">
+
+                <span class="section-eyebrow">
+
+                    YOUR NEXT CHAPTER
+
+                </span>
+
+
+                <h2>
+
+                    Your Profile.
+
+                    <span class="gradient-text">
+
+                        Your Identity.
+
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Make your presence known.
+                    Join X2 SOCIAL HUB and showcase your
+                    social identity with style.
+
+                </p>
+
+
+                <a href="add-profile.html" class="primary-button">
+
+                    Create Your Profile
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="directory-join-decoration">
+
+                X2
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-symbol">X2</span>
+
+                <span class="brand-name">SOCIAL HUB</span>
+
+            </a>
+
+
+            <p>
+
+                A premium space to discover,
+                connect and express your digital identity.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>EXPLORE</h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="profiles.html">All Profiles</a>
+
+            <a href="add-profile.html">Join Community</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>CONNECT</h4>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="https://www.instagram.com/x2.rohuuuu.baghel?cplk=MXN0ZW4wYWphZmNnYw=="
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram ↗
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+
+            © 2026 X2 SOCIAL HUB. All rights reserved.
+
+        </span>
+
+
+        <span class="footer-signature">
+
+            DESIGNED WITH ✦ FOR CONNECTION
+
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     FLOATING MUSIC PLAYER
+===================================================== -->
+
+<div class="music-player glass-panel" id="music-player">
+
+    <div class="music-artwork">
+
+        <span class="music-artwork-icon">♫</span>
+
+    </div>
+
+
+    <div class="music-information">
+
+        <strong id="music-title">X2 Vibes</strong>
+
+        <span id="music-artist">Your Music Space</span>
+
+    </div>
+
+
+    <div class="music-controls">
+
+        <button id="music-previous" aria-label="Previous track">
+
+            ◀
+
+        </button>
+
+
+        <button id="play-pause" aria-label="Play music">
+
+            ▶
+
+        </button>
+
+
+        <button id="music-next" aria-label="Next track">
+
+            ▶
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAVIGATION
+===================================================== -->
+
+<nav class="mobile-bottom-nav">
+
+    <a href="index.html">
+
+        <span>⌂</span>
+
+        <small>Home</small>
+
+    </a>
+
+
+    <a href="profiles.html" class="active">
+
+        <span>◈</span>
+
+        <small>Explore</small>
+
+    </a>
+
+
+    <a href="add-profile.html">
+
+        <span>＋</span>
+
+        <small>Join</small>
+
+    </a>
+
+
+    <a href="contact.html">
+
+        <span>✉</span>
+
+        <small>Contact</small>
+
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     THEME PANEL
+===================================================== -->
+
+<div class="theme-overlay" id="theme-overlay">
+
+    <div class="theme-panel glass-panel">
+
+        <div class="theme-panel-header">
+
+            <div>
+
+                <span class="section-eyebrow">PERSONALIZE</span>
+
+                <h3>Choose Your Style</h3>
+
+            </div>
+
+
+            <button
+                class="theme-close-button"
+                id="theme-close"
+                aria-label="Close themes">
+
+                ✕
+
+            </button>
+
+        </div>
+
+
+        <div class="theme-options" id="theme-options">
+
+            <!-- Theme options generated by JavaScript -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     GLOBAL MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="global-modal"
+    aria-hidden="true">
+
+    <div
+        class="modal-container glass-panel"
+        id="modal-content">
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST NOTIFICATIONS
+===================================================== -->
+
+<div
+    class="toast-container"
+    id="toast-container"
+    aria-live="polite"
+    aria-atomic="true">
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
