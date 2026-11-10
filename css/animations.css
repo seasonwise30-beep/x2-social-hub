@@ -1,0 +1,559 @@
+/* =========================================================
+   X2 SOCIAL HUB
+   PREMIUM ANIMATION SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL ANIMATION SETTINGS
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   02. PAGE ENTRANCE
+========================================================= */
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: pageFadeIn 0.7s ease both;
+}
+
+
+/* =========================================================
+   03. FLOATING ANIMATION
+========================================================= */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes floatingSlow {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
+}
+
+.floating-element {
+    animation: floating 5s ease-in-out infinite;
+}
+
+.floating-element-slow {
+    animation: floatingSlow 8s ease-in-out infinite;
+}
+
+.card-back {
+    animation: floatingSlow 7s ease-in-out infinite;
+}
+
+.card-front {
+    animation: floating 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   04. GRADIENT ANIMATION
+========================================================= */
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: gradientFlow 7s ease infinite;
+}
+
+.animated-gradient {
+    background-size: 300% 300%;
+    animation: gradientFlow 12s ease infinite;
+}
+
+
+/* =========================================================
+   05. GLASS REFLECTION
+========================================================= */
+
+@keyframes glassReflection {
+    0% {
+        transform: translateX(-150%) skewX(-20deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateX(150%) skewX(-20deg);
+        opacity: 0;
+    }
+}
+
+.glass-panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-panel::after {
+    pointer-events: none;
+}
+
+.glass-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-shine::after {
+    content: "";
+    position: absolute;
+    inset: -100% auto -100% -50%;
+    width: 35%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.18),
+        transparent
+    );
+    transform: rotate(20deg);
+    animation: glassReflection 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   06. PULSE EFFECTS
+========================================================= */
+
+@keyframes softPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(124, 92, 255, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(124, 92, 255, 0.4);
+    }
+}
+
+.pulse {
+    animation: softPulse 2.5s ease-in-out infinite;
+}
+
+.glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   07. BUTTON INTERACTIONS
+========================================================= */
+
+.primary-button,
+.secondary-button,
+.icon-button,
+.profile-action-button {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-3px);
+}
+
+.primary-button:active,
+.secondary-button:active,
+.icon-button:active {
+    transform: scale(0.96);
+}
+
+.primary-button:hover {
+    box-shadow: 0 12px 35px rgba(124, 92, 255, 0.25);
+}
+
+
+/* =========================================================
+   08. PROFILE CARD INTERACTIONS
+========================================================= */
+
+.profile-card {
+    transition:
+        transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+        border-color 0.3s ease,
+        box-shadow 0.4s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+}
+
+.profile-avatar {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.profile-card:hover .profile-avatar {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   09. HERO ANIMATIONS
+========================================================= */
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.hero-badge {
+    animation: heroReveal 0.7s 0.1s both;
+}
+
+.hero-title {
+    animation: heroReveal 0.9s 0.2s both;
+}
+
+.hero-description {
+    animation: heroReveal 0.9s 0.35s both;
+}
+
+.hero-buttons {
+    animation: heroReveal 0.9s 0.5s both;
+}
+
+.hero-trust {
+    animation: heroReveal 0.9s 0.65s both;
+}
+
+.hero-visual {
+    animation: heroReveal 1s 0.35s both;
+}
+
+
+/* =========================================================
+   10. MODAL ANIMATIONS
+========================================================= */
+
+@keyframes modalBackdrop {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0);
+    }
+
+    to {
+        opacity: 1;
+        backdrop-filter: blur(12px);
+    }
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-overlay.active {
+    animation: modalBackdrop 0.3s ease both;
+}
+
+.modal-overlay.active .modal-container {
+    animation: modalEnter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+
+/* =========================================================
+   11. THEME PANEL ANIMATION
+========================================================= */
+
+@keyframes panelEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.theme-panel.active {
+    animation: panelEnter 0.35s ease both;
+}
+
+.theme-option {
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.theme-option:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   12. MUSIC EQUALIZER
+========================================================= */
+
+@keyframes equalizer {
+    0%, 100% {
+        height: 5px;
+    }
+
+    50% {
+        height: 19px;
+    }
+}
+
+.equalizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 22px;
+}
+
+.equalizer span {
+    display: block;
+    width: 3px;
+    height: 5px;
+    border-radius: 5px;
+    background: currentColor;
+}
+
+.equalizer.playing span:nth-child(1) {
+    animation: equalizer 0.6s ease-in-out infinite;
+}
+
+.equalizer.playing span:nth-child(2) {
+    animation: equalizer 0.8s ease-in-out infinite 0.1s;
+}
+
+.equalizer.playing span:nth-child(3) {
+    animation: equalizer 0.5s ease-in-out infinite 0.2s;
+}
+
+.equalizer.playing span:nth-child(4) {
+    animation: equalizer 0.7s ease-in-out infinite 0.15s;
+}
+
+
+/* =========================================================
+   13. TOAST ANIMATION
+========================================================= */
+
+@keyframes toastEnter {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toastExit {
+    to {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+}
+
+.toast {
+    animation: toastEnter 0.35s ease both;
+}
+
+.toast.removing {
+    animation: toastExit 0.3s ease both;
+}
+
+
+/* =========================================================
+   14. SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   15. LOADING ANIMATION
+========================================================= */
+
+@keyframes loadingSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: loadingSpin 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   16. SHIMMER EFFECT
+========================================================= */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--surface),
+        var(--surface-hover),
+        var(--surface)
+    );
+
+    background-size: 200% 100%;
+
+    animation: shimmer 1.7s linear infinite;
+}
+
+
+/* =========================================================
+   17. ICON ROTATION
+========================================================= */
+
+.icon-rotate {
+    transition: transform 0.3s ease;
+}
+
+.icon-rotate:hover {
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITY: REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   END OF ANIMATION SYSTEM
+========================================================= */
