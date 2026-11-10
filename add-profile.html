@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#08080d">
+
+    <meta name="description"
+        content="Join X2 SOCIAL HUB. Submit your profile and showcase your digital identity.">
+
+    <meta property="og:title" content="Join X2 SOCIAL HUB">
+
+    <meta property="og:description"
+        content="Create your social identity and become part of X2 SOCIAL HUB.">
+
+    <meta property="og:type" content="website">
+
+    <title>Join X2 SOCIAL HUB | Submit Your Profile</title>
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!-- STYLESHEETS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/themes.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body data-theme="liquid">
+
+
+<!-- =====================================================
+     AMBIENT BACKGROUND
+===================================================== -->
+
+<div class="ambient-background">
+
+    <div class="ambient-orb orb-one"></div>
+
+    <div class="ambient-orb orb-two"></div>
+
+    <div class="ambient-orb orb-three"></div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header glass-panel">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-symbol">X2</span>
+
+        <span class="brand-name">SOCIAL HUB</span>
+
+    </a>
+
+
+    <nav class="desktop-navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="profiles.html">Explore</a>
+
+        <a href="add-profile.html" class="active">Join Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="icon-button"
+            id="theme-toggle"
+            aria-label="Change appearance">
+
+            ◐
+
+        </button>
+
+
+        <a href="profiles.html" class="header-cta primary-button">
+
+            Explore
+
+            <span>↗</span>
+
+        </a>
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false">
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-navigation" id="mobile-navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="profiles.html">Explore Profiles</a>
+
+        <a href="add-profile.html" class="active">Join Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="join-page-main">
+
+
+    <!-- PAGE INTRODUCTION -->
+
+    <section class="join-hero">
+
+        <div class="hero-badge">
+
+            <span class="status-dot"></span>
+
+            BECOME PART OF THE COMMUNITY
+
+        </div>
+
+
+        <h1>
+
+            Make Your
+
+            <span class="gradient-text">Identity Known.</span>
+
+        </h1>
+
+
+        <p>
+
+            Your personality deserves its own space.
+            Submit your details and become part of
+            X2 SOCIAL HUB.
+
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         FORM SECTION
+    ================================================== -->
+
+    <section class="join-form-section">
+
+
+        <div class="join-form-card glass-panel">
+
+
+            <div class="join-form-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+
+                        PROFILE REGISTRATION
+
+                    </span>
+
+
+                    <h2>
+
+                        Create Your Profile
+
+                    </h2>
+
+
+                    <p>
+
+                        Complete the information below.
+
+                    </p>
+
+                </div>
+
+
+                <span class="form-step-badge">
+
+                    ✦ NEW MEMBER
+
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROFILE FORM
+            ================================================== -->
+
+            <form
+                id="profile-submission-form"
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+                novalidate>
+
+
+                <!-- SECTION 01 -->
+
+                <div class="form-section-heading">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>Personal Information</h3>
+
+                        <p>Tell us who you are.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="full-name">
+
+                            Full Name <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="full_name"
+                            placeholder="Enter your full name"
+                            minlength="2"
+                            maxlength="80"
+                            autocomplete="name"
+                            required>
+
+
+                        <small class="field-error" id="full-name-error"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="display-name">
+
+                            Display Name <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="display-name"
+                            name="display_name"
+                            placeholder="Your public profile name"
+                            minlength="2"
+                            maxlength="60"
+                            required>
+
+
+                        <small class="field-error" id="display-name-error"></small>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="profile-bio-input">
+
+                            Short Bio <span>*</span>
+
+                        </label>
+
+
+                        <textarea
+                            id="profile-bio-input"
+                            name="bio"
+                            rows="4"
+                            minlength="10"
+                            maxlength="250"
+                            placeholder="Tell the community something about yourself..."
+                            required></textarea>
+
+
+                        <div class="character-counter">
+
+                            <span id="bio-character-count">0</span>/250
+
+                        </div>
+
+
+                        <small class="field-error" id="bio-error"></small>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SECTION 02 -->
+
+                <div class="form-section-heading">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>Social Information</h3>
+
+                        <p>Connect your social identity.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="instagram-username">
+
+                            Instagram Username <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-with-prefix">
+
+                            <span>@</span>
+
+
+                            <input
+                                type="text"
+                                id="instagram-username"
+                                name="instagram_username"
+                                placeholder="yourusername"
+                                maxlength="30"
+                                required>
+
+                        </div>
+
+
+                        <small class="field-error" id="instagram-error"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="instagram-url">
+
+                            Instagram Profile URL <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="url"
+                            id="instagram-url"
+                            name="instagram_url"
+                            placeholder="https://www.instagram.com/username/"
+                            required>
+
+
+                        <small class="field-error" id="instagram-url-error"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="profile-category-input">
+
+                            Profile Category <span>*</span>
+
+                        </label>
+
+
+                        <select
+                            id="profile-category-input"
+                            name="category"
+                            required>
+
+                            <option value="">Select a category</option>
+
+                            <option value="creator">Creator</option>
+
+                            <option value="influencer">Influencer</option>
+
+                            <option value="artist">Artist</option>
+
+                            <option value="photographer">Photographer</option>
+
+                            <option value="business">Business</option>
+
+                            <option value="developer">Developer</option>
+
+                            <option value="other">Other</option>
+
+                        </select>
+
+
+                        <small class="field-error" id="category-error"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="profile-image-url">
+
+                            Profile Image URL
+
+                        </label>
+
+
+                        <input
+                            type="url"
+                            id="profile-image-url"
+                            name="profile_image_url"
+                            placeholder="https://example.com/photo.jpg">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SECTION 03 -->
+
+                <div class="form-section-heading">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>Contact Information</h3>
+
+                        <p>Optional ways for people to reach you.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="email-address">
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email-address"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="whatsapp-number">
+
+                            WhatsApp Number
+
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            id="whatsapp-number"
+                            name="whatsapp"
+                            placeholder="Country code + number"
+                            autocomplete="tel">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SECTION 04 -->
+
+                <div class="form-section-heading">
+
+                    <span>04</span>
+
+                    <div>
+
+                        <h3>Final Confirmation</h3>
+
+                        <p>Review your information before submitting.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-consent-box">
+
+
+                    <label class="custom-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="profile-consent"
+                            name="consent"
+                            value="yes"
+                            required>
+
+
+                        <span class="checkbox-design"></span>
+
+
+                        <span class="consent-text">
+
+                            I confirm that the information provided
+                            is accurate and that I have permission
+                            to share these social links publicly.
+
+                            <strong>*</strong>
+
+                        </span>
+
+                    </label>
+
+
+                    <small class="field-error" id="consent-error"></small>
+
+                </div>
+
+
+                <!-- HIDDEN FORM FIELDS -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New X2 SOCIAL HUB Profile Submission">
+
+
+                <input
+                    type="hidden"
+                    name="submission_source"
+                    value="X2 SOCIAL HUB Website">
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="primary-button submit-profile-button"
+                    id="submit-profile-button">
+
+                    <span id="submit-button-text">
+
+                        Submit My Profile
+
+                    </span>
+
+                    <span>↗</span>
+
+                </button>
+
+
+                <p class="form-privacy-note">
+
+                    🔒 Your information will be reviewed
+                    before being published.
+
+                </p>
+
+
+                <!-- FORM STATUS -->
+
+                <div
+                    class="form-status-message"
+                    id="form-status-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         BOTTOM CTA
+    ================================================== -->
+
+    <section class="join-bottom-section">
+
+        <p>
+
+            Already part of the community?
+
+        </p>
+
+
+        <a href="profiles.html">
+
+            Explore Existing Profiles →
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-bottom">
+
+        <span>
+
+            © 2026 X2 SOCIAL HUB. All rights reserved.
+
+        </span>
+
+
+        <span class="footer-signature">
+
+            MADE FOR CONNECTION ✦
+
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MUSIC PLAYER
+===================================================== -->
+
+<div class="music-player glass-panel" id="music-player">
+
+    <div class="music-artwork">
+
+        <span class="music-artwork-icon">♫</span>
+
+    </div>
+
+
+    <div class="music-information">
+
+        <strong id="music-title">X2 Vibes</strong>
+
+        <span id="music-artist">Your Music Space</span>
+
+    </div>
+
+
+    <div class="music-controls">
+
+        <button id="music-previous" aria-label="Previous track">
+
+            ◀
+
+        </button>
+
+
+        <button id="play-pause" aria-label="Play music">
+
+            ▶
+
+        </button>
+
+
+        <button id="music-next" aria-label="Next track">
+
+            ▶
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAV
+===================================================== -->
+
+<nav class="mobile-bottom-nav">
+
+    <a href="index.html">
+
+        <span>⌂</span>
+
+        <small>Home</small>
+
+    </a>
+
+
+    <a href="profiles.html">
+
+        <span>◈</span>
+
+        <small>Explore</small>
+
+    </a>
+
+
+    <a href="add-profile.html" class="active">
+
+        <span>＋</span>
+
+        <small>Join</small>
+
+    </a>
+
+
+    <a href="contact.html">
+
+        <span>✉</span>
+
+        <small>Contact</small>
+
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     THEME PANEL
+===================================================== -->
+
+<div class="theme-overlay" id="theme-overlay">
+
+    <div class="theme-panel glass-panel">
+
+        <div class="theme-panel-header">
+
+            <div>
+
+                <span class="section-eyebrow">PERSONALIZE</span>
+
+                <h3>Choose Your Style</h3>
+
+            </div>
+
+
+            <button
+                class="theme-close-button"
+                id="theme-close"
+                aria-label="Close themes">
+
+                ✕
+
+            </button>
+
+        </div>
+
+
+        <div class="theme-options" id="theme-options">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     GLOBAL MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="global-modal"
+    aria-hidden="true">
+
+    <div
+        class="modal-container glass-panel"
+        id="modal-content">
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST CONTAINER
+===================================================== -->
+
+<div
+    class="toast-container"
+    id="toast-container"
+    aria-live="polite"
+    aria-atomic="true">
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
